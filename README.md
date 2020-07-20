@@ -6,3 +6,8 @@
 [Description]
 
 (Currently in beta)
+
+---
+
+## Maintainers
+- [Riccardo Brero](https://github.com/Riki1312)
