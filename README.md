@@ -3,9 +3,9 @@
 </p>
 
 ## Overview
-[Description]
+The goals of the design system include improving UI consistency and quality, making the design and development process more efficient and focused, establishing a shared vocabulary between designer and developer, and providing clear, discoverable guidance around design and development best practices.
 
-(Currently in beta)
+*(Currently in beta)*
 
 ---
 
