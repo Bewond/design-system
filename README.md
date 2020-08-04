@@ -7,7 +7,5 @@ The goals of the design system include improving UI consistency and quality, mak
 
 (Currently in beta)
 
----
-
 ## Maintainers
 - [Riccardo Brero](https://github.com/Riki1312)
