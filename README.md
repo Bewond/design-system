@@ -7,21 +7,21 @@
 
 The goals of Bewond Design System include improving UI consistency and quality, making the design and development process more efficient and focused, establishing a shared vocabulary between designer and developer, and providing clear, discoverable guidance around design and development best practices.
 
-[Documentation](https://github.com/Bewond/design-system/wiki)
+*(Currently in beta)*
 
-- **Guidelines**
+### Documentation
+
+- **[Guidelines](https://github.com/Bewond/design-system/wiki)**
   - [Grid](https://github.com/Bewond/design-system/wiki/Grid)
   - [Spacing](https://github.com/Bewond/design-system/wiki/Spacing)
   - [Color](https://github.com/Bewond/design-system/wiki/Color)
   - [Typography](https://github.com/Bewond/design-system/wiki/Typography)
   - [Icons](https://github.com/Bewond/design-system/wiki/Icons)
   - [Motion](https://github.com/Bewond/design-system/wiki/Motion)
-- **Components**
+- **[Components](https://github.com/Bewond/design-system/wiki/Components)**
   - [Todo]
-- **Patterns**
-- **Resources**
-
-*(Currently in beta)*
+- **[Patterns](https://github.com/Bewond/design-system/wiki/Patterns)**
+- **[Resources](https://github.com/Bewond/design-system/wiki/Resources)**
 
 ---
 
