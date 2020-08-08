@@ -23,6 +23,10 @@ The goals of Bewond Design System include improving UI consistency and quality, 
 - **[Patterns](https://github.com/Bewond/design-system/wiki/Patterns)**
 - **[Resources](https://github.com/Bewond/design-system/wiki/Resources)**
 
+### Inspiration and models to follow
+- [Material Design](https://material.io/)
+- [Carbon Design System](https://www.carbondesignsystem.com/)
+
 ---
 
 ## Maintainers
