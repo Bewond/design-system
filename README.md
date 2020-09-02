@@ -5,6 +5,8 @@
 ## Overview
 **BDS** — Bewond Design System
 
+[![ci](https://img.shields.io/badge/style-Bewond%20Design%20System-blue)](https://github.com/Bewond/design-system)
+
 The goals of Bewond Design System include improving UI consistency and quality, making the design and development process more efficient and focused, establishing a shared vocabulary between designer and developer, and providing clear, discoverable guidance around design and development best practices.
 
 *(Currently in beta)*
