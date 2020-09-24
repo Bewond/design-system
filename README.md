@@ -1,11 +1,11 @@
 <p align="center">
-<img src="/docs/assets/bddesignsystem.png" width="100%" alt="bd design system" />
+<img src="/docs/assets/BDS/BDS.png" width="100%" alt="Bewond Design System" />
 </p>
 
 ## Overview
 **BDS** — Bewond Design System
 
-[![ci](https://img.shields.io/badge/style-Bewond%20Design%20System-blue)](https://github.com/Bewond/design-system)
+[![style](https://img.shields.io/badge/style-Bewond%20Design%20System-blue)](https://github.com/Bewond/design-system)
 
 BDS is Bewond’s open source design system for products and digital experiences. The system consists of working code, design tools and resources, human interface guidelines, and more.
 
