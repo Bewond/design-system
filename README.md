@@ -7,7 +7,7 @@
 
 [![ci](https://img.shields.io/badge/style-Bewond%20Design%20System-blue)](https://github.com/Bewond/design-system)
 
-BDS is open source design system for products and digital experiences. The system consists of working code, design tools and resources, human interface guidelines, and more.
+BDS is Bewond’s open source design system for products and digital experiences. The system consists of working code, design tools and resources, human interface guidelines, and more.
 
 The goals of the design system include providing clear guidance around design and development best practices. Improving consistency and quality, making the design and development process more efficient.
 
