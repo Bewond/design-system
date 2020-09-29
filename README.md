@@ -19,7 +19,7 @@ The goals of the design system include providing clear guidance around design an
 | **bds_elements** | Reusable combinations of components and patterns. |  |
 | **bds_colors** | Color tokens available in the Bewond Design System. |  |
 | **bds_layout** | Layout-based units and spacing scale. |  |
-| **bds_type** | Type tokens used alongside BDSans. |  |
+| **bds_type** | Typography for digital and software products. |  |
 
 ## Documentation
 
