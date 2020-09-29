@@ -38,4 +38,4 @@ We're always looking for contributors to help us fix bugs, build new features, o
 - [Riccardo Brero](https://github.com/Riki1312)
 
 ## 📝 License
-Licensed under the Apache 2.0 License.
+Licensed under the [Apache 2.0 License](/LICENSE).
