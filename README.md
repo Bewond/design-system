@@ -13,7 +13,7 @@ The goals of the design system include providing clear guidance around design an
 
 *(Currently in beta)*
 
-### Documentation
+## 📚 Documentation
 
 - **[Guidelines](https://github.com/Bewond/design-system/wiki)**
   - [Grid](https://github.com/Bewond/design-system/wiki/Grid)
@@ -31,7 +31,11 @@ The goals of the design system include providing clear guidance around design an
 - [Material Design](https://material.io/)
 - [Carbon Design System](https://www.carbondesignsystem.com/)
 
----
+## 🙌 Contributing
+We're always looking for contributors to help us fix bugs, build new features, or help us improve the project documentation. If you're interested, definitely check out our Contributing Guide and our Developer Guide.
 
-## Maintainers
+### Maintainers
 - [Riccardo Brero](https://github.com/Riki1312)
+
+## 📝 License
+Licensed under the Apache 2.0 License.
