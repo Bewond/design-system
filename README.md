@@ -38,6 +38,7 @@ The goals of the design system include providing clear guidance around design an
 ### Inspiration and models to follow
 - [Material Design](https://material.io/)
 - [Carbon Design System](https://www.carbondesignsystem.com/)
+- [Vercel Design](https://vercel.com/design)
 
 ## Contributing
 We're always looking for contributors to help us fix bugs, build new features, or help us improve the project documentation. If you're interested, definitely check out our [Contributing Guide](/.github/CONTRIBUTING.md)
