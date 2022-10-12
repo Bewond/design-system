@@ -2,7 +2,7 @@ name: bds_flutter
 repository: https://github.com/bewond/design-system
 
 packages:
-  - "**"
+  - "packages/**"
 
 command:
   bootstrap:

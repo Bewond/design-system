@@ -7,4 +7,4 @@
 
 ## BDS Type (Flutter)
 
-TODO
+Text style tokens.
