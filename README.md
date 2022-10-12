@@ -17,11 +17,11 @@ BDS is Bewond’s open source design system for products and digital experiences
 
 | Package name | Description | Support |
 |---|---|---|
-| **bds-components** | Components. | [Flutter](/packages/components-flutter) |
+| **bds-components** | Components. |  |
 | **bds-elements** | Reusable combinations of components and patterns. |  |
-| **bds-colors** | Color tokens available in the Bewond Design System. |  |
+| **bds-colors** | Color tokens available in the Bewond Design System. | [Flutter](/packages/bds_colors) |
 | **bds-layout** | Layout-based units and spacing scale. |  |
-| **bds-type** | Typography for digital and software products. |  |
+| **bds-type** | Typography for digital and software products. | [Flutter](/packages/bds_type) |
 
 ## Documentation
 
