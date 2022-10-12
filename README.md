@@ -15,13 +15,13 @@ BDS is Bewond’s open source design system for products and digital experiences
 
 *(Currently in beta)*
 
-| Package name | Description | Support |
-|---|---|---|
-| **bds-components** | Components collection. |  |
-| **bds-elements** | Reusable combinations of components. |  |
-| **bds-colors** | Color tokens and themes. | [Flutter](/packages/bds_colors) |
-| **bds-layout** | Layout and space tokens. |  |
-| **bds-type** | Text style tokens. | [Flutter](/packages/bds_type) |
+| Package name       | Description                          | Support                         |
+|--------------------|--------------------------------------|---------------------------------|
+| **bds-components** | Components collection.               |                                 |
+| **bds-elements**   | Reusable combinations of components. |                                 |
+| **bds-colors**     | Color tokens and themes.             | [Flutter](/packages/bds_colors) |
+| **bds-layout**     | Layout and space tokens.             |                                 |
+| **bds-type**       | Text style tokens.                   | [Flutter](/packages/bds_type)   |
 
 ## Documentation
 
