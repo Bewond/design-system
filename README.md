@@ -1,20 +1,22 @@
-<p align="center">
-<img src="/docs/assets/BDS/BDS.png" width="100%" alt="Bewond Design System" />
-</p>
+<h1 align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="/docs/assets/BDS/BDS_dark.png">
+    <img alt="BDS (Bewond Design System)" src="/docs/assets/BDS/BDS.png">
+  </picture>
+</h1>
 
 ## Overview
+
 **BDS** — Bewond Design System
 
 [![style](https://img.shields.io/badge/style-Bewond%20Design%20System-blue)](https://github.com/Bewond/design-system)
 
-BDS is Bewond’s open source design system for products and digital experiences. The system consists of working code, design tools and resources, human interface guidelines, and more.
-
-The goals of the design system include providing clear guidance around design and development best practices. Improving consistency and quality, making the design and development process more efficient.
+BDS is Bewond’s open source design system for products and digital experiences. A design system is a collection of pre-built, reusable assets—components, patterns, guidance, and code—that allows its users to build consistent digital experiences faster.
 
 *(Currently in beta)*
 
 | Package name | Description | Support |
-|----------------|-----------------------------------------------------|-----------------------------------------|
+|---|---|---|
 | **bds-components** | Components. | [Flutter](/packages/components-flutter) |
 | **bds-elements** | Reusable combinations of components and patterns. |  |
 | **bds-colors** | Color tokens available in the Bewond Design System. |  |
@@ -23,28 +25,33 @@ The goals of the design system include providing clear guidance around design an
 
 ## Documentation
 
-- **[Guidelines](https://github.com/Bewond/design-system/wiki)**
-  - [Grid](https://github.com/Bewond/design-system/wiki/Grid)
-  - [Spacing](https://github.com/Bewond/design-system/wiki/Spacing)
-  - [Color](https://github.com/Bewond/design-system/wiki/Color)
-  - [Typography](https://github.com/Bewond/design-system/wiki/Typography)
-  - [Icons](https://github.com/Bewond/design-system/wiki/Icons)
-  - [Motion](https://github.com/Bewond/design-system/wiki/Motion)
-- **[Components](https://github.com/Bewond/design-system/wiki/Components)**
-  - [Todo]
-- **[Patterns](https://github.com/Bewond/design-system/wiki/Patterns)**
-- **[Resources](https://github.com/Bewond/design-system/wiki/Resources)**
+- **[Guidelines](https://bewond.com/design/bds/guidelines)**
+  - [Grid](https://bewond.com/design/bds/grid)
+  - [Spacing](https://bewond.com/design/bds/spacing)
+  - [Color](https://bewond.com/design/bds/color)
+  - [Typography](https://bewond.com/design/bds/typography)
+  - [Icons](https://bewond.com/design/bds/icons)
+  - [Motion](https://bewond.com/design/bds/motion)
+- **[Components](https://bewond.com/design/bds/components)**
+- **[Patterns](https://bewond.com/design/bds/patterns)**
+- **[Templates](https://bewond.com/design/bds/templates)**
 
-### Inspiration and models to follow
+### Inspiration
+
 - [Material Design](https://material.io/)
 - [Carbon Design System](https://www.carbondesignsystem.com/)
+- [Shopify Polaris](https://polaris.shopify.com/)
+- [Base Web](https://baseweb.design/)
 - [Vercel Design](https://vercel.com/design)
 
-## Contributing
+## Contributing ❤️
+
 We're always looking for contributors to help us fix bugs, build new features, or help us improve the project documentation. If you're interested, definitely check out our [Contributing Guide](/.github/CONTRIBUTING.md)
 
 ### Maintainers
+
 - [Riccardo Brero](https://github.com/Riki1312)
 
 ## License
+
 Licensed under the [Apache 2.0 License](/LICENSE).
