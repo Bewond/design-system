@@ -5,15 +5,14 @@
   </picture>
 </h1>
 
+[![packages](https://github.com/Bewond/design-system/actions/workflows/packages.yaml/badge.svg)](https://github.com/Bewond/design-system/actions/workflows/packages.yaml)
+[![codecov](https://codecov.io/gh/Bewond/design-system/branch/main/graph/badge.svg?token=9MUDEVQ43P)](https://codecov.io/gh/Bewond/design-system)
+
 ## Overview
 
-**BDS** — Bewond Design System
+BDS (Bewond Design System) is Bewond’s open source design system for products and digital experiences. A design system is a collection of pre-built, reusable assets—components, patterns, guidance, and code—that allows its users to build consistent digital experiences faster.
 
-[![style](https://img.shields.io/badge/style-Bewond%20Design%20System-blue)](https://github.com/Bewond/design-system)
-
-BDS is Bewond’s open source design system for products and digital experiences. A design system is a collection of pre-built, reusable assets—components, patterns, guidance, and code—that allows its users to build consistent digital experiences faster.
-
-*(Currently in beta)*
+_(Currently in beta)._
 
 | Package name       | Description                          | Support                         |
 |--------------------|--------------------------------------|---------------------------------|

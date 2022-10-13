@@ -6,14 +6,14 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-  
+
   # BDS Colors dependencies updates config.
   - package-ecosystem: "pub"
     directory: "/packages/bds_colors"
     schedule:
       interval: "daily"
     open-pull-requests-limit: 4
-  
+
   # BDS Type dependencies updates config.
   - package-ecosystem: "pub"
     directory: "/packages/bds_type"

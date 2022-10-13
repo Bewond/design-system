@@ -3,19 +3,21 @@ repository: https://github.com/bewond/design-system
 
 packages:
   - "packages/**"
+ignore:
+  - 'packages/**/example'
 
 command:
   bootstrap:
     usePubspecOverrides: true
 
 scripts:
-  analyze:
-    run: melos exec -- "flutter analyze"
-    description: Run `flutter analyze` in all packages
-  
   format:
     run: melos exec -- "flutter format . --set-exit-if-changed"
     description: Run `flutter format .` in all packages
+
+  analyze:
+    run: melos exec -- "flutter analyze"
+    description: Run `flutter analyze` in all packages
 
   test:
     run: melos exec --dir-exists=test -- "flutter test"

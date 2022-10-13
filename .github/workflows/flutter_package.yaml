@@ -30,7 +30,7 @@ jobs:
         working-directory: ${{inputs.working_directory}}
     runs-on: ${{inputs.runs_on}}
     steps:
-      - name: 📚 Git Checkout
+      - name: 📚 Checkout
         uses: actions/checkout@v3
 
       - name: 🐦 Setup Flutter
@@ -40,17 +40,19 @@ jobs:
           channel: ${{inputs.flutter_channel}}
           cache: true
 
-      - name: 📦 Install Dependencies
+      - name: 📦 Install dependencies
         run: flutter pub get
 
-      - name: ✨ Check Formatting
+      - name: ✨ Check formatting
         run: flutter format --set-exit-if-changed lib test
 
       - name: 🕵️ Analyze
         run: flutter analyze lib test
 
-      - name: 🧪 Run Tests
+      - name: 🧪 Run tests
         run: flutter test --coverage
 
       - name: ☁️ Upload tests coverage
         uses: codecov/codecov-action@v3
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
