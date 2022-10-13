@@ -15,16 +15,12 @@ on:
 jobs:
   # BDS Colors package workflow.
   package_bds_colors:
-    uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/flutter_package.yml@v1
+    uses: ./.github/actions/flutter_package
     with:
-      coverage_excludes: "*.g.dart"
-      min_coverage: 0
       working_directory: "./packages/bds_colors/"
   
   # BDS Type package workflow.
   package_bds_type:
-    uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/flutter_package.yml@v1
+    uses: ./.github/actions/flutter_package
     with:
-      coverage_excludes: "*.g.dart"
-      min_coverage: 0
       working_directory: "./packages/bds_type/"
