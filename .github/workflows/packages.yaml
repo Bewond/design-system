@@ -1,4 +1,4 @@
-name: flutter_packages
+name: packages
 
 concurrency:
   group: $-$
@@ -15,12 +15,12 @@ on:
 jobs:
   # BDS Colors package workflow.
   package_bds_colors:
-    uses: ./.github/workflows/actions/flutter_package
+    uses: ./.github/workflows/flutter_package
     with:
       working_directory: "./packages/bds_colors/"
 
   # BDS Type package workflow.
   package_bds_type:
-    uses: ./.github/workflows/actions/flutter_package
+    uses: ./.github/workflows/flutter_package
     with:
       working_directory: "./packages/bds_type/"

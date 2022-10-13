@@ -1,4 +1,4 @@
-name: Flutter Package Workflow
+name: flutter_package
 
 on:
   workflow_call:
@@ -24,13 +24,11 @@ on:
         default: ""
 
 jobs:
-  build:
+  main:
     defaults:
       run:
         working-directory: ${{inputs.working_directory}}
-
     runs-on: ${{inputs.runs_on}}
-
     steps:
       - name: 📚 Git Checkout
         uses: actions/checkout@v3
