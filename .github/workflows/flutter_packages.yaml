@@ -19,7 +19,7 @@ jobs:
     with:
       coverage_excludes: "*.g.dart"
       min_coverage: 0
-      working_directory: "/packages/bds_colors/"
+      working_directory: "./packages/bds_colors/"
   
   # BDS Type package workflow.
   package_bds_type:
@@ -27,4 +27,4 @@ jobs:
     with:
       coverage_excludes: "*.g.dart"
       min_coverage: 0
-      working_directory: "/packages/bds_type/"
+      working_directory: "./packages/bds_type/"
