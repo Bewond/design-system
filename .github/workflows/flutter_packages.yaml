@@ -1,0 +1,30 @@
+name: flutter_packages
+
+concurrency:
+  group: $-$
+  cancel-in-progress: true
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+jobs:
+  # BDS Colors package workflow.
+  package_bds_colors:
+    uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/flutter_package.yml@v1
+    with:
+      coverage_excludes: "*.g.dart"
+      min_coverage: 0
+      working_directory: "/packages/bds_colors/"
+  
+  # BDS Type package workflow.
+  package_bds_type:
+    uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/flutter_package.yml@v1
+    with:
+      coverage_excludes: "*.g.dart"
+      min_coverage: 0
+      working_directory: "/packages/bds_type/"

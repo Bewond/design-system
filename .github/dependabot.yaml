@@ -1,0 +1,22 @@
+version: 2
+enable-beta-ecosystems: true
+updates:
+  # Github Actions dependencies updates config.
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+  
+  # BDS Colors dependencies updates config.
+  - package-ecosystem: "pub"
+    directory: "/packages/bds_colors"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 4
+  
+  # BDS Type dependencies updates config.
+  - package-ecosystem: "pub"
+    directory: "/packages/bds_type"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 4

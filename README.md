@@ -46,7 +46,7 @@ BDS is Bewond’s open source design system for products and digital experiences
 
 ## Contributing ❤️
 
-We're always looking for contributors to help us fix bugs, build new features, or help us improve the project documentation. If you're interested, definitely check out our [Contributing Guide](/.github/CONTRIBUTING.md)
+We're always looking for contributors to help us fix bugs, build new features, or help us improve the project documentation. If you're interested, definitely check out our [Contributing Guide](/CONTRIBUTING.md)
 
 ### Maintainers
 
