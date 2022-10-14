@@ -1,0 +1,25 @@
+import 'package:flutter/painting.dart';
+
+import 'package:bds_colors/color_palette.dart';
+
+/// Collection of color palettes.
+class Palettes {
+
+{{- range $i, $palette := .global }}
+  /// {{ $i }} color palette.
+  static const {{ lower $i }} = ColorPalette(
+    name: '{{ lower $i }}',
+    light: {
+    {{- range $j, $color := .Light }}
+      Shade.shade{{ $j }}: Color(0xFF{{ upper (trimprefix .value "#") }}),
+    {{- end }}
+    },
+    dark: {
+    {{- range $j, $color := .Dark }}
+      Shade.shade{{ $j }}: Color(0xFF{{ upper (trimprefix .value "#") }}),
+    {{- end }}
+    },
+  );
+{{ end -}}
+
+}

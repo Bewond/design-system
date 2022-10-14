@@ -8,3 +8,9 @@
 ## BDS Colors (Flutter)
 
 Color tokens and themes.
+
+```sh
+cd packages/bds_colors/tokens
+
+hof gen tokens.json -T palettes.template=palettes.g.dart -O ../lib/generated/
+```
