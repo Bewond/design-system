@@ -6,6 +6,8 @@ import 'package:bds_colors/color_palette.dart';
 class Palettes {
 
 {{- range $i, $palette := .global }}
+
+{{- if ne $i "Overlays" }}
   /// {{ $i }} color palette.
   static const {{ lower $i }} = ColorPalette(
     name: '{{ lower $i }}',
@@ -20,6 +22,23 @@ class Palettes {
     {{- end }}
     },
   );
+{{ else }}
+  /// {{ $i }} color palette.
+  static const {{ lower $i }} = ColorPalette(
+    name: '{{ lower $i }}',
+    light: {
+    {{- range $j, $color := .Light }}{{ $code := upper (substr .value 1 7) }}{{ $opacity := upper (substr .value 7 9) }}
+      Shade.shade{{ $j }}: Color(0x{{ $opacity }}{{ $code }}),
+    {{- end }}
+    },
+    dark: {
+    {{- range $j, $color := .Dark }}{{ $code := upper (substr .value 1 7) }}{{ $opacity := upper (substr .value 7 9) }}
+      Shade.shade{{ $j }}: Color(0x{{ $opacity }}{{ $code }}),
+    {{- end }}
+    },
+  );
+{{ end -}}
+
 {{ end -}}
 
 }

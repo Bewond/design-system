@@ -470,8 +470,32 @@ class Palettes {
   static const overlays = ColorPalette(
     name: 'overlays',
     light: {
+      Shade.shade1: Color(0x03000000),
+      Shade.shade10: Color(0x7A000000),
+      Shade.shade11: Color(0x8F000000),
+      Shade.shade12: Color(0xE8000000),
+      Shade.shade2: Color(0x08000000),
+      Shade.shade3: Color(0x0D000000),
+      Shade.shade4: Color(0x12000000),
+      Shade.shade5: Color(0x17000000),
+      Shade.shade6: Color(0x1C000000),
+      Shade.shade7: Color(0x24000000),
+      Shade.shade8: Color(0x38000000),
+      Shade.shade9: Color(0x70000000),
     },
     dark: {
+      Shade.shade1: Color(0x00000000),
+      Shade.shade10: Color(0x73FFFFFF),
+      Shade.shade11: Color(0x96FFFFFF),
+      Shade.shade12: Color(0xEBFFFFFF),
+      Shade.shade2: Color(0x03FFFFFF),
+      Shade.shade3: Color(0x08FFFFFF),
+      Shade.shade4: Color(0x0FFFFFFF),
+      Shade.shade5: Color(0x17FFFFFF),
+      Shade.shade6: Color(0x1FFFFFFF),
+      Shade.shade7: Color(0x2EFFFFFF),
+      Shade.shade8: Color(0x40FFFFFF),
+      Shade.shade9: Color(0x63FFFFFF),
     },
   );
 
