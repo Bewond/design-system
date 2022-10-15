@@ -1,11 +1,11 @@
 import 'package:flutter/painting.dart';
 
-import 'package:bds_colors/color_palette.dart';
+import 'package:bds_colors/colors_palette.dart';
 
 /// Collection of color palettes.
 class Palettes {
   /// Amber color palette.
-  static const amber = ColorPalette(
+  static const amber = ColorsPalette(
     name: 'amber',
     light: {
       Shade.shade1: Color(0xFFFEFDFB),
@@ -38,7 +38,7 @@ class Palettes {
   );
 
   /// Blue color palette.
-  static const blue = ColorPalette(
+  static const blue = ColorsPalette(
     name: 'blue',
     light: {
       Shade.shade1: Color(0xFFFBFDFF),
@@ -71,7 +71,7 @@ class Palettes {
   );
 
   /// Brown color palette.
-  static const brown = ColorPalette(
+  static const brown = ColorsPalette(
     name: 'brown',
     light: {
       Shade.shade1: Color(0xFFFEFDFC),
@@ -104,7 +104,7 @@ class Palettes {
   );
 
   /// Crimson color palette.
-  static const crimson = ColorPalette(
+  static const crimson = ColorsPalette(
     name: 'crimson',
     light: {
       Shade.shade1: Color(0xFFFFFCFD),
@@ -137,7 +137,7 @@ class Palettes {
   );
 
   /// Cyan color palette.
-  static const cyan = ColorPalette(
+  static const cyan = ColorsPalette(
     name: 'cyan',
     light: {
       Shade.shade1: Color(0xFFFAFDFE),
@@ -170,7 +170,7 @@ class Palettes {
   );
 
   /// Grass color palette.
-  static const grass = ColorPalette(
+  static const grass = ColorsPalette(
     name: 'grass',
     light: {
       Shade.shade1: Color(0xFFFBFEFB),
@@ -203,7 +203,7 @@ class Palettes {
   );
 
   /// Gray color palette.
-  static const gray = ColorPalette(
+  static const gray = ColorsPalette(
     name: 'gray',
     light: {
       Shade.shade1: Color(0xFFFCFCFC),
@@ -236,7 +236,7 @@ class Palettes {
   );
 
   /// Green color palette.
-  static const green = ColorPalette(
+  static const green = ColorsPalette(
     name: 'green',
     light: {
       Shade.shade1: Color(0xFFFBFEFC),
@@ -269,7 +269,7 @@ class Palettes {
   );
 
   /// Indigo color palette.
-  static const indigo = ColorPalette(
+  static const indigo = ColorsPalette(
     name: 'indigo',
     light: {
       Shade.shade1: Color(0xFFFDFDFE),
@@ -302,7 +302,7 @@ class Palettes {
   );
 
   /// Lime color palette.
-  static const lime = ColorPalette(
+  static const lime = ColorsPalette(
     name: 'lime',
     light: {
       Shade.shade1: Color(0xFFFCFDFA),
@@ -335,7 +335,7 @@ class Palettes {
   );
 
   /// Mauve color palette.
-  static const mauve = ColorPalette(
+  static const mauve = ColorsPalette(
     name: 'mauve',
     light: {
       Shade.shade1: Color(0xFFFDFCFD),
@@ -368,7 +368,7 @@ class Palettes {
   );
 
   /// Mint color palette.
-  static const mint = ColorPalette(
+  static const mint = ColorsPalette(
     name: 'mint',
     light: {
       Shade.shade1: Color(0xFFF9FEFD),
@@ -401,7 +401,7 @@ class Palettes {
   );
 
   /// Olive color palette.
-  static const olive = ColorPalette(
+  static const olive = ColorsPalette(
     name: 'olive',
     light: {
       Shade.shade1: Color(0xFFFCFDFC),
@@ -434,7 +434,7 @@ class Palettes {
   );
 
   /// Orange color palette.
-  static const orange = ColorPalette(
+  static const orange = ColorsPalette(
     name: 'orange',
     light: {
       Shade.shade1: Color(0xFFFEFCFB),
@@ -467,7 +467,7 @@ class Palettes {
   );
 
   /// Overlays color palette.
-  static const overlays = ColorPalette(
+  static const overlays = ColorsPalette(
     name: 'overlays',
     light: {
       Shade.shade1: Color(0x03000000),
@@ -500,7 +500,7 @@ class Palettes {
   );
 
   /// Pink color palette.
-  static const pink = ColorPalette(
+  static const pink = ColorsPalette(
     name: 'pink',
     light: {
       Shade.shade1: Color(0xFFFFFCFE),
@@ -533,7 +533,7 @@ class Palettes {
   );
 
   /// Plum color palette.
-  static const plum = ColorPalette(
+  static const plum = ColorsPalette(
     name: 'plum',
     light: {
       Shade.shade1: Color(0xFFFEFCFF),
@@ -566,7 +566,7 @@ class Palettes {
   );
 
   /// Purple color palette.
-  static const purple = ColorPalette(
+  static const purple = ColorsPalette(
     name: 'purple',
     light: {
       Shade.shade1: Color(0xFFFEFCFE),
@@ -599,7 +599,7 @@ class Palettes {
   );
 
   /// Red color palette.
-  static const red = ColorPalette(
+  static const red = ColorsPalette(
     name: 'red',
     light: {
       Shade.shade1: Color(0xFFFFFCFC),
@@ -632,7 +632,7 @@ class Palettes {
   );
 
   /// Sage color palette.
-  static const sage = ColorPalette(
+  static const sage = ColorsPalette(
     name: 'sage',
     light: {
       Shade.shade1: Color(0xFFFBFDFC),
@@ -665,7 +665,7 @@ class Palettes {
   );
 
   /// Sand color palette.
-  static const sand = ColorPalette(
+  static const sand = ColorsPalette(
     name: 'sand',
     light: {
       Shade.shade1: Color(0xFFFDFDFC),
@@ -698,7 +698,7 @@ class Palettes {
   );
 
   /// Sky color palette.
-  static const sky = ColorPalette(
+  static const sky = ColorsPalette(
     name: 'sky',
     light: {
       Shade.shade1: Color(0xFFF9FEFF),
@@ -731,7 +731,7 @@ class Palettes {
   );
 
   /// Slate color palette.
-  static const slate = ColorPalette(
+  static const slate = ColorsPalette(
     name: 'slate',
     light: {
       Shade.shade1: Color(0xFFFBFCFD),
@@ -764,7 +764,7 @@ class Palettes {
   );
 
   /// Teal color palette.
-  static const teal = ColorPalette(
+  static const teal = ColorsPalette(
     name: 'teal',
     light: {
       Shade.shade1: Color(0xFFFAFEFD),
@@ -797,7 +797,7 @@ class Palettes {
   );
 
   /// Tomato color palette.
-  static const tomato = ColorPalette(
+  static const tomato = ColorsPalette(
     name: 'tomato',
     light: {
       Shade.shade1: Color(0xFFFFFCFC),
@@ -830,7 +830,7 @@ class Palettes {
   );
 
   /// Violet color palette.
-  static const violet = ColorPalette(
+  static const violet = ColorsPalette(
     name: 'violet',
     light: {
       Shade.shade1: Color(0xFFFDFCFE),
@@ -863,7 +863,7 @@ class Palettes {
   );
 
   /// Yellow color palette.
-  static const yellow = ColorPalette(
+  static const yellow = ColorsPalette(
     name: 'yellow',
     light: {
       Shade.shade1: Color(0xFFFDFDF9),

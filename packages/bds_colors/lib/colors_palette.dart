@@ -46,11 +46,11 @@ extension ShadeUtils on Shade {
 typedef PaletteData = Map<Shade, Color>;
 
 /// Collection of related colors with different shades and brightness.
-class ColorPalette {
+class ColorsPalette {
   /// Creates a color palette.
   ///
   /// The [name] is used to identify the palette.
-  const ColorPalette({
+  const ColorsPalette({
     required this.name,
     required this.light,
     required this.dark,

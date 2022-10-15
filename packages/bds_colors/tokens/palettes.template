@@ -1,6 +1,6 @@
 import 'package:flutter/painting.dart';
 
-import 'package:bds_colors/color_palette.dart';
+import 'package:bds_colors/colors_palette.dart';
 
 /// Collection of color palettes.
 class Palettes {
@@ -9,7 +9,7 @@ class Palettes {
 
 {{- if ne $i "Overlays" }}
   /// {{ $i }} color palette.
-  static const {{ lower $i }} = ColorPalette(
+  static const {{ lower $i }} = ColorsPalette(
     name: '{{ lower $i }}',
     light: {
     {{- range $j, $color := .Light }}
@@ -24,7 +24,7 @@ class Palettes {
   );
 {{ else }}
   /// {{ $i }} color palette.
-  static const {{ lower $i }} = ColorPalette(
+  static const {{ lower $i }} = ColorsPalette(
     name: '{{ lower $i }}',
     light: {
     {{- range $j, $color := .Light }}{{ $code := upper (substr .value 1 7) }}{{ $opacity := upper (substr .value 7 9) }}
