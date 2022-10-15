@@ -72,6 +72,6 @@ class _InheritedStateProvider<T extends Listenable> extends InheritedWidget {
 
   @override
   bool updateShouldNotify(_InheritedStateProvider oldWidget) {
-    return true;
+    return !identical(oldWidget, this);
   }
 }
