@@ -1,6 +1,5 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
-
-import 'package:bds_colors/color_palette.dart';
 
 class PaletteProviderData {
   const PaletteProviderData({this.brightness = Brightness.light});

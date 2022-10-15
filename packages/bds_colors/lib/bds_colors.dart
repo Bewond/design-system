@@ -2,6 +2,7 @@
 library bds_colors;
 
 export 'package:bds_colors/palettes/palettes.g.dart';
+export 'package:bds_colors/themes/themes.dart';
 
 export 'package:bds_colors/widgets/colors_data.dart';
 

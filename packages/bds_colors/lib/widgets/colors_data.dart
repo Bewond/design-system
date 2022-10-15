@@ -1,6 +1,6 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 
-import 'package:bds_colors/color_palette.dart';
 import 'package:bds_colors/widgets/palette_provider.dart';
 
 class ColorsData extends StatelessWidget {
@@ -17,9 +17,6 @@ class ColorsData extends StatelessWidget {
   }
 
   Brightness _platformBrightness(BuildContext context) {
-    final platformBrightness = MediaQuery.platformBrightnessOf(context);
-    return platformBrightness == Brightness.light
-        ? Brightness.light
-        : Brightness.dark;
+    return MediaQuery.platformBrightnessOf(context);
   }
 }

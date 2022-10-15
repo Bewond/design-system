@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/painting.dart';
 
 class SmartColor {
@@ -7,4 +8,10 @@ class SmartColor {
 
   final Color light;
   final Color dark;
+
+  SmartColor invert() => SmartColor(dark, light);
+
+  Color resolve(Brightness brightness) {
+    return brightness == Brightness.light ? light : dark;
+  }
 }

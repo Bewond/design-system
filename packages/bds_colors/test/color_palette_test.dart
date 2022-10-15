@@ -1,7 +1,10 @@
-import 'package:flutter/painting.dart';
 import 'package:flutter_test/flutter_test.dart';
 
+import 'package:flutter/foundation.dart';
+import 'package:flutter/painting.dart';
+
 import 'package:bds_colors/bds_colors.dart';
+import 'package:bds_colors/smart_color.dart';
 
 void main() {
   group('ShadeUtils', () {
@@ -50,48 +53,32 @@ void main() {
     test('returns the color according to shade and brightness', () {
       const palette = ColorPalette(
         name: 'test',
-        light: {
-          Shade.shade1: Color(0xFF000000),
-          Shade.shade2: Color(0xFF111111),
-          Shade.shade3: Color(0xFF222222),
-        },
-        dark: {
-          Shade.shade1: Color(0xFF333333),
-          Shade.shade2: Color(0xFF444444),
-          Shade.shade3: Color(0xFF555555),
+        data: {
+          Shade.shade1: SmartColor(Color(0xFFFFFFFF), Color(0xFF000000)),
+          Shade.shade2: SmartColor(Color(0xFFDDDDDD), Color(0xFF222222)),
         },
       );
 
-      expect(palette.get(Shade.shade1), const Color(0xFF000000));
-      expect(palette.get(Shade.shade2), const Color(0xFF111111));
-      expect(palette.get(Shade.shade3), const Color(0xFF222222));
-
-      expect(palette.get(Shade.shade1, brightness: Brightness.dark),
-          const Color(0xFF333333));
-      expect(palette.get(Shade.shade2, brightness: Brightness.dark),
-          const Color(0xFF444444));
-      expect(palette.get(Shade.shade3, brightness: Brightness.dark),
-          const Color(0xFF555555));
+      expect(palette.get(Shade.shade1).resolve(Brightness.light),
+          const Color(0xFFFFFFFF));
+      expect(palette.get(Shade.shade2).resolve(Brightness.light),
+          const Color(0xFFDDDDDD));
+      expect(palette.get(Shade.shade1).resolve(Brightness.dark),
+          const Color(0xFF000000));
+      expect(palette.get(Shade.shade2).resolve(Brightness.dark),
+          const Color(0xFF222222));
     });
 
     test('throws assertion error if the shade is not defined', () {
       const palette = ColorPalette(
         name: 'test',
-        light: {
-          Shade.shade1: Color(0xFF000000),
-          Shade.shade2: Color(0xFF111111),
-          Shade.shade3: Color(0xFF222222),
-        },
-        dark: {
-          Shade.shade1: Color(0xFF333333),
-          Shade.shade2: Color(0xFF444444),
-          Shade.shade3: Color(0xFF555555),
+        data: {
+          Shade.shade1: SmartColor(Color(0xFFFFFFFF), Color(0xFF000000)),
+          Shade.shade2: SmartColor(Color(0xFFDDDDDD), Color(0xFF222222)),
         },
       );
 
       expect(() => palette.get(Shade.shade4), throwsAssertionError);
-      expect(() => palette.get(Shade.shade4, brightness: Brightness.dark),
-          throwsAssertionError);
     });
   });
 }

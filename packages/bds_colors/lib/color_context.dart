@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 
 import 'package:bds_colors/color_palette.dart';
@@ -12,6 +13,6 @@ extension ColorContext on BuildContext {
       PaletteProvider.of(this, listen: false).brightness = value;
 
   Color color(ColorPalette palette, Shade shade) {
-    return palette.get(shade, brightness: watchBrightness);
+    return palette.get(shade).resolve(watchBrightness);
   }
 }
