@@ -1,44 +1,20 @@
-import 'package:flutter/painting.dart';
-
-import 'package:bds_colors/colors_palette.dart';
+import 'package:bds_colors/color_palette.dart';
+import 'package:bds_colors/smart_color.dart';
+import 'package:bds_colors/palettes/base_colors.g.dart';
 
 /// Collection of color palettes.
 class Palettes {
 
 {{- range $i, $palette := .global }}
-
-{{- if ne $i "Overlays" }}
   /// {{ $i }} color palette.
-  static const {{ lower $i }} = ColorsPalette(
+  static const {{ lower $i }} = ColorPalette(
     name: '{{ lower $i }}',
-    light: {
+    data: {
     {{- range $j, $color := .Light }}
-      Shade.shade{{ $j }}: Color(0xFF{{ upper (trimprefix .value "#") }}),
-    {{- end }}
-    },
-    dark: {
-    {{- range $j, $color := .Dark }}
-      Shade.shade{{ $j }}: Color(0xFF{{ upper (trimprefix .value "#") }}),
+      Shade.shade{{ $j }}: SmartColor(BaseColors.{{ lower $i }}Light{{ $j }}, BaseColors.{{ lower $i }}Dark{{ $j }}),
     {{- end }}
     },
   );
-{{ else }}
-  /// {{ $i }} color palette.
-  static const {{ lower $i }} = ColorsPalette(
-    name: '{{ lower $i }}',
-    light: {
-    {{- range $j, $color := .Light }}{{ $code := upper (substr .value 1 7) }}{{ $opacity := upper (substr .value 7 9) }}
-      Shade.shade{{ $j }}: Color(0x{{ $opacity }}{{ $code }}),
-    {{- end }}
-    },
-    dark: {
-    {{- range $j, $color := .Dark }}{{ $code := upper (substr .value 1 7) }}{{ $opacity := upper (substr .value 7 9) }}
-      Shade.shade{{ $j }}: Color(0x{{ $opacity }}{{ $code }}),
-    {{- end }}
-    },
-  );
-{{ end -}}
-
 {{ end -}}
 
 }

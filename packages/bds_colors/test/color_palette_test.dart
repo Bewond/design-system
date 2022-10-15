@@ -48,7 +48,7 @@ void main() {
 
   group('ColorPalette', () {
     test('returns the color according to shade and brightness', () {
-      const palette = ColorsPalette(
+      const palette = ColorPalette(
         name: 'test',
         light: {
           Shade.shade1: Color(0xFF000000),
@@ -75,7 +75,7 @@ void main() {
     });
 
     test('throws assertion error if the shade is not defined', () {
-      const palette = ColorsPalette(
+      const palette = ColorPalette(
         name: 'test',
         light: {
           Shade.shade1: Color(0xFF000000),

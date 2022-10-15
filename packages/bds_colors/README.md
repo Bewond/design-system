@@ -12,5 +12,7 @@ Color tokens and themes.
 ```sh
 cd packages/bds_colors/tokens
 
-hof gen tokens.json -T palettes.template=palettes.g.dart -O ../lib/generated/
+hof gen tokens.json -T base_colors.template=base_colors.g.dart -O ../lib/palettes/
+
+hof gen tokens.json -T palettes.template=palettes.g.dart -O ../lib/palettes/
 ```

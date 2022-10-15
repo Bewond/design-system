@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 
-import 'package:bds_colors/colors_palette.dart';
+import 'package:bds_colors/color_palette.dart';
 import 'package:bds_colors/widgets/palette_provider.dart';
 
 class ColorsData extends StatelessWidget {

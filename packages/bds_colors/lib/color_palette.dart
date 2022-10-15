@@ -1,11 +1,8 @@
 import 'package:flutter/painting.dart';
 
-/// Brightness of the color palette.
-///
-/// Can be either [light] or [dark].
-enum Brightness { light, dark }
+import 'package:bds_colors/smart_color.dart';
 
-/// Shades of the color palette.
+/// Shades for [ColorPalette].
 ///
 /// From [shade1] to [shade12].
 enum Shade {
@@ -43,35 +40,28 @@ extension ShadeUtils on Shade {
 }
 
 /// Map shades to their corresponding color in the palette.
-typedef PaletteData = Map<Shade, Color>;
+typedef ColorPaletteData = Map<Shade, SmartColor>;
 
 /// Collection of related colors with different shades and brightness.
-class ColorsPalette {
+class ColorPalette {
   /// Creates a color palette.
   ///
   /// The [name] is used to identify the palette.
-  const ColorsPalette({
+  const ColorPalette({
     required this.name,
-    required this.light,
-    required this.dark,
+    required this.data,
   });
 
   /// Name of the color palette.
   final String name;
 
-  /// Map shades to their corresponding light colors.
-  final PaletteData light;
+  /// Map shades to their corresponding color.
+  final ColorPaletteData data;
 
-  /// Map shades to their corresponding dark colors.
-  final PaletteData dark;
-
-  /// Returns the color based on the given [shade] and [brightness].
-  ///
-  /// Defaults to [Brightness.light].
-  Color get(Shade shade, {Brightness brightness = Brightness.light}) {
-    final data = brightness == Brightness.dark ? dark : light;
+  /// Returns the color based on the given [shade].
+  SmartColor get(Shade shade) {
     // Assert that the shade exists in the palette.
     assert(data.containsKey(shade));
-    return data[shade] ?? const Color(0xFF000000);
+    return data[shade] ?? const SmartColor.constant(Color(0xFF000000));
   }
 }
