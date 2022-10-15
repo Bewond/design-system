@@ -11,7 +11,10 @@ class Palettes {
     name: '{{ lower $i }}',
     data: {
     {{- range $j, $color := .Light }}
-      Shade.shade{{ $j }}: SmartColor(BaseColors.{{ lower $i }}Light{{ $j }}, BaseColors.{{ lower $i }}Dark{{ $j }}),
+      Shade.shade{{ $j }}: SmartColor(
+        BaseColors.{{ lower $i }}Light{{ $j }},
+        BaseColors.{{ lower $i }}Dark{{ $j }},
+      ),
     {{- end }}
     },
   );
