@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 
 import 'package:bds_colors/widgets/palette_provider.dart';
@@ -11,12 +10,8 @@ class ColorsData extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PaletteProvider(
-      defaultBrightness: _platformBrightness(context),
+      defaultBrightness: MediaQuery.platformBrightnessOf(context),
       child: child,
     );
-  }
-
-  Brightness _platformBrightness(BuildContext context) {
-    return MediaQuery.platformBrightnessOf(context);
   }
 }
