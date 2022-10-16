@@ -13,17 +13,19 @@ extension ColorContext on BuildContext {
   ColorMode get watchColorMode => watch<PaletteState>().colorMode;
 
   ColorMode get colorMode => read<PaletteState>().colorMode;
-
   set colorMode(ColorMode value) => read<PaletteState>().colorMode = value;
 
+  ColorTheme get watchColorTheme => watch<ThemeState>().theme;
+
+  ColorTheme get colorTheme => read<ThemeState>().theme;
+  set colorTheme(ColorTheme value) => read<ThemeState>().theme = value;
+
   Color paletteColor(ColorPalette palette, Shade shade) {
-    final smartColor = palette.get(shade);
-    return _resolveSmartColor(smartColor);
+    return _resolveSmartColor(palette.get(shade));
   }
 
   Color themeColor(Token token) {
-    final smartColor = watch<ThemeState>().theme.get(token);
-    return _resolveSmartColor(smartColor);
+    return _resolveSmartColor(watchColorTheme.get(token));
   }
 
   Color _resolveSmartColor(SmartColor smartColor) {

@@ -1,4 +1,4 @@
-import 'package:flutter/painting.dart';
+import 'package:flutter/widgets.dart';
 
 import 'package:bds_colors/smart_color.dart';
 
@@ -43,6 +43,7 @@ extension ShadeUtils on Shade {
 typedef ColorPaletteData = Map<Shade, SmartColor>;
 
 /// Set of related colors with different shades and brightness.
+@immutable
 class ColorPalette {
   /// Creates a color palette.
   ///
@@ -63,5 +64,20 @@ class ColorPalette {
     // Assert that the shade exists in the palette.
     assert(data.containsKey(shade));
     return data[shade] ?? const SmartColor.constant(Color(0xFF000000));
+  }
+
+  ColorPalette copyWith({
+    String? name,
+    ColorPaletteData? data,
+  }) {
+    final copyData = this.data;
+    if (data != null) {
+      copyData.addAll(data);
+    }
+
+    return ColorPalette(
+      name: name ?? this.name,
+      data: copyData,
+    );
   }
 }

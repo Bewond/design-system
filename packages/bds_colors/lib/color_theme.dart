@@ -1,4 +1,4 @@
-import 'package:flutter/painting.dart';
+import 'package:flutter/widgets.dart';
 
 import 'package:bds_colors/smart_color.dart';
 
@@ -18,6 +18,7 @@ enum Token {
 typedef ColorThemeData = Map<Token, SmartColor>;
 
 /// Configuration of color tokens.
+@immutable
 class ColorTheme {
   /// Creates a color theme.
   ///
@@ -38,5 +39,20 @@ class ColorTheme {
     // Assert that the token exists in the theme.
     assert(data.containsKey(token));
     return data[token] ?? const SmartColor.constant(Color(0xFF000000));
+  }
+
+  ColorTheme copyWith({
+    String? name,
+    ColorThemeData? data,
+  }) {
+    final copyData = this.data;
+    if (data != null) {
+      copyData.addAll(data);
+    }
+
+    return ColorTheme(
+      name: name ?? this.name,
+      data: copyData,
+    );
   }
 }

@@ -11,13 +11,13 @@ class ColorsData extends StatelessWidget {
   const ColorsData({
     Key? key,
     this.colorMode,
-    this.theme,
+    this.colorTheme,
     required this.child,
   }) : super(key: key);
 
   final ColorMode? colorMode;
 
-  final ColorTheme? theme;
+  final ColorTheme? colorTheme;
 
   final Widget child;
 
@@ -26,7 +26,7 @@ class ColorsData extends StatelessWidget {
     return PaletteScope(
       colorMode: colorMode ?? ColorMode.auto,
       child: ThemeScope(
-        theme: theme ?? Themes.main,
+        theme: colorTheme ?? Themes.main,
         child: child,
       ),
     );
