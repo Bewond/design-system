@@ -10,7 +10,7 @@ import 'package:bds_colors/palettes/palettes.g.dart';
 class Themes {
   /// The default theme.
   static final main = ColorTheme(
-    name: 'white',
+    name: 'main',
     data: {
       Token.background: const SmartColor(
         Color(0xFFFFFFFF),
