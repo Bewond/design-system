@@ -3,10 +3,10 @@ import 'package:flutter/widgets.dart';
 import 'package:bds_colors/palette/shade.dart';
 import 'package:bds_colors/smart_color.dart';
 
-/// Map shades to their corresponding color in the palette.
+/// Map all shades to their corresponding color in the palette.
 typedef ColorPaletteData = Map<Shade, SmartColor>;
 
-/// Set of related colors with different shades and brightness.
+/// Set of related colors with different shades.
 @immutable
 class ColorPalette {
   /// Creates a color palette.
@@ -20,16 +20,19 @@ class ColorPalette {
   /// Name of the color palette.
   final String name;
 
-  /// Map shades to their corresponding color.
+  /// Map all shades to their corresponding color.
   final ColorPaletteData data;
 
-  /// Returns the color based on the given [shade].
+  /// Returns the [SmartColor] based on the given [shade].
   SmartColor get(Shade shade) {
     // Assert that the shade exists in the palette.
     assert(data.containsKey(shade));
     return data[shade] ?? const SmartColor.constant(Color(0xFF000000));
   }
 
+  /// Creates a copy of this color palette.
+  ///
+  /// Use [data] to override specific shades.
   ColorPalette copyWith({
     String? name,
     ColorPaletteData? data,
