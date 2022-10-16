@@ -13,7 +13,9 @@ dependencies:
     sdk: flutter
   #
   state_provider:
-    path: ../../../state-provider/
+    git:
+      url: git://github.com/Riki1312/state_provider.git
+      ref: main
 
 dev_dependencies:
   flutter_test:
