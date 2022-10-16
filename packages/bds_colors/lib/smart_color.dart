@@ -1,5 +1,10 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/painting.dart';
+
+enum ColorMode {
+  light,
+  dark,
+  auto,
+}
 
 class SmartColor {
   const SmartColor(this.light, this.dark);
@@ -11,7 +16,16 @@ class SmartColor {
 
   SmartColor invert() => SmartColor(dark, light);
 
-  Color resolve(Brightness brightness) {
-    return brightness == Brightness.light ? light : dark;
+  Color resolve(
+    ColorMode colorMode,
+    Color Function(Color light, Color dark) resolveAutoMode,
+  ) {
+    if (colorMode == ColorMode.light) {
+      return light;
+    } else if (colorMode == ColorMode.dark) {
+      return dark;
+    } else {
+      return resolveAutoMode(light, dark);
+    }
   }
 }

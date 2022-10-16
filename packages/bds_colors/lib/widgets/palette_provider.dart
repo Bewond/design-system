@@ -1,75 +1,39 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
+import 'package:state_provider/state_provider.dart';
 
-class PaletteProviderData {
-  const PaletteProviderData({this.brightness = Brightness.light});
+import 'package:bds_colors/smart_color.dart';
 
-  final Brightness brightness;
+class PaletteState extends ChangeNotifier {
+  PaletteState({ColorMode colorMode = ColorMode.auto}) : _colorMode = colorMode;
 
-  PaletteProviderData copyWith({Brightness? brightness}) {
-    return PaletteProviderData(
-      brightness: brightness ?? this.brightness,
-    );
+  ColorMode _colorMode = ColorMode.auto;
+
+  ColorMode get colorMode => _colorMode;
+
+  set colorMode(ColorMode value) {
+    if (_colorMode != value) {
+      _colorMode = value;
+      notifyListeners();
+    }
   }
 }
 
-class PaletteProvider extends StatefulWidget {
-  const PaletteProvider({
+class PaletteScope extends StatelessWidget {
+  const PaletteScope({
     Key? key,
-    required this.defaultBrightness,
+    required this.colorMode,
     required this.child,
   }) : super(key: key);
 
-  final Brightness defaultBrightness;
+  final ColorMode colorMode;
 
   final Widget child;
 
   @override
-  State<PaletteProvider> createState() => PaletteProviderState();
-
-  static PaletteProviderState of(BuildContext context, {bool listen = true}) {
-    return listen
-        ? context.dependOnInheritedWidgetOfExactType<_InheritedPalette>()!.state
-        : context.findAncestorWidgetOfExactType<_InheritedPalette>()!.state;
-  }
-}
-
-class PaletteProviderState extends State<PaletteProvider> {
-  PaletteProviderData _data = const PaletteProviderData();
-
-  Brightness get brightness => _data.brightness;
-  set brightness(Brightness brightness) {
-    setState(() {
-      _data = _data.copyWith(brightness: brightness);
-    });
-  }
-
-  @override
-  void initState() {
-    super.initState();
-    _data = _data.copyWith(brightness: widget.defaultBrightness);
-  }
-
-  @override
   Widget build(BuildContext context) {
-    return _InheritedPalette(state: this, data: _data, child: widget.child);
-  }
-}
-
-class _InheritedPalette extends InheritedWidget {
-  const _InheritedPalette({
-    Key? key,
-    required this.state,
-    required this.data,
-    required child,
-  }) : super(key: key, child: child);
-
-  final PaletteProviderState state;
-
-  final PaletteProviderData data;
-
-  @override
-  bool updateShouldNotify(_InheritedPalette oldWidget) {
-    return data != oldWidget.data;
+    return StateProvider(
+      data: PaletteState(colorMode: colorMode),
+      child: child,
+    );
   }
 }

@@ -42,7 +42,7 @@ extension ShadeUtils on Shade {
 /// Map shades to their corresponding color in the palette.
 typedef ColorPaletteData = Map<Shade, SmartColor>;
 
-/// Collection of related colors with different shades and brightness.
+/// Set of related colors with different shades and brightness.
 class ColorPalette {
   /// Creates a color palette.
   ///

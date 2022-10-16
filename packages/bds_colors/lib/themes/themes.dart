@@ -6,7 +6,9 @@ import 'package:bds_colors/smart_color.dart';
 import 'package:bds_colors/palettes/base_colors.g.dart';
 import 'package:bds_colors/palettes/palettes.g.dart';
 
+/// Collection of color themes.
 class Themes {
+  /// The default theme.
   static final main = ColorTheme(
     name: 'white',
     data: {

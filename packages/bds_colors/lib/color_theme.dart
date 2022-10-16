@@ -17,7 +17,7 @@ enum Token {
 /// Map tokens to their corresponding color in the theme.
 typedef ColorThemeData = Map<Token, SmartColor>;
 
-/// Collection of color tokens with their corresponding values.
+/// Configuration of color tokens.
 class ColorTheme {
   /// Creates a color theme.
   ///
