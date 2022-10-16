@@ -37,7 +37,7 @@ class ColorPalette {
     String? name,
     ColorPaletteData? data,
   }) {
-    final copyData = this.data;
+    ColorPaletteData copyData = Map.from(this.data);
     if (data != null) {
       copyData.addAll(data);
     }

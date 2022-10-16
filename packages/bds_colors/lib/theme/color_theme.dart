@@ -37,7 +37,7 @@ class ColorTheme {
     String? name,
     ColorThemeData? data,
   }) {
-    final copyData = this.data;
+    ColorThemeData copyData = Map.from(this.data);
     if (data != null) {
       copyData.addAll(data);
     }
