@@ -1,6 +1,8 @@
-import 'package:bds_colors/color_palette.dart';
+import 'package:bds_colors/data/base_colors.g.dart';
+
+import 'package:bds_colors/palette/color_palette.dart';
+import 'package:bds_colors/palette/shade.dart';
 import 'package:bds_colors/smart_color.dart';
-import 'package:bds_colors/palettes/base_colors.g.dart';
 
 /// Collection of color palettes.
 class Palettes {

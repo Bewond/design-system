@@ -1,18 +1,7 @@
 import 'package:flutter/widgets.dart';
 
+import 'package:bds_colors/theme/token.dart';
 import 'package:bds_colors/smart_color.dart';
-
-/// Tokens for [ColorTheme].
-enum Token {
-  background,
-  backgroundHover,
-  backgroundActive,
-  backgroundSelected,
-  backgroundSelectedHover,
-  backgroundBrand,
-  backgroundInverse,
-  backgroundInverseHover,
-}
 
 /// Map tokens to their corresponding color in the theme.
 typedef ColorThemeData = Map<Token, SmartColor>;

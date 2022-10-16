@@ -1,8 +1,8 @@
 import 'package:flutter/widgets.dart';
 import 'package:state_provider/state_provider.dart';
 
-import 'package:bds_colors/themes/themes.dart';
-import 'package:bds_colors/color_theme.dart';
+import 'package:bds_colors/data/themes.dart';
+import 'package:bds_colors/theme/color_theme.dart';
 
 class ThemeState extends ChangeNotifier {
   ThemeState({required ColorTheme theme}) : _theme = theme;

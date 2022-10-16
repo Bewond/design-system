@@ -1,10 +1,12 @@
 import 'package:flutter/painting.dart';
 
-import 'package:bds_colors/color_palette.dart';
-import 'package:bds_colors/color_theme.dart';
+import 'package:bds_colors/data/base_colors.g.dart';
+import 'package:bds_colors/data/palettes.g.dart';
+
+import 'package:bds_colors/palette/shade.dart';
+import 'package:bds_colors/theme/color_theme.dart';
+import 'package:bds_colors/theme/token.dart';
 import 'package:bds_colors/smart_color.dart';
-import 'package:bds_colors/palettes/base_colors.g.dart';
-import 'package:bds_colors/palettes/palettes.g.dart';
 
 /// Collection of color themes.
 class Themes {

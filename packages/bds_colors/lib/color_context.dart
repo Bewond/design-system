@@ -2,11 +2,13 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 import 'package:state_provider/state_provider.dart';
 
-import 'package:bds_colors/widgets/palette_scope.dart';
-import 'package:bds_colors/widgets/theme_scope.dart';
+import 'package:bds_colors/palette/color_palette.dart';
+import 'package:bds_colors/palette/palette_scope.dart';
+import 'package:bds_colors/palette/shade.dart';
+import 'package:bds_colors/theme/color_theme.dart';
+import 'package:bds_colors/theme/theme_scope.dart';
+import 'package:bds_colors/theme/token.dart';
 
-import 'package:bds_colors/color_palette.dart';
-import 'package:bds_colors/color_theme.dart';
 import 'package:bds_colors/smart_color.dart';
 
 extension ColorContext on BuildContext {
