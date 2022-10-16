@@ -4,6 +4,7 @@ import 'package:state_provider/state_provider.dart';
 import 'package:bds_colors/data/themes.dart';
 import 'package:bds_colors/theme/color_theme.dart';
 
+/// A [ChangeNotifier] that holds the current [ColorTheme].
 class ThemeState extends ChangeNotifier {
   ThemeState({required ColorTheme theme}) : _theme = theme;
 
@@ -19,6 +20,9 @@ class ThemeState extends ChangeNotifier {
   }
 }
 
+/// Provides a [ThemeState] to its descendants widgets.
+///
+/// Use [context.watch<ThemeState>().theme] to access the current [ColorTheme].
 class ThemeScope extends StatelessWidget {
   const ThemeScope({
     Key? key,

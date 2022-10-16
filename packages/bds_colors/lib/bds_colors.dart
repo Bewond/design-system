@@ -1,4 +1,6 @@
 /// Flutter package for BDS Colors.
+///
+/// For more information, see the [documentation](https://github.com/bewond/design-system)
 library bds_colors;
 
 export 'package:bds_colors/data/base_colors.g.dart';

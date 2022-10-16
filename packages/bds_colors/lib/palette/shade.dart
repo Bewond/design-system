@@ -1,48 +1,39 @@
 /// Shades for [ColorPalette].
-///
-/// From [shade1] to [shade12], each [Shade] is designed
-/// for at least one specific use case:
-///
-/// * [shade1]-[shade4] for app backgrounds and subtle component backgrounds.
-/// * [shade3]-[shade5] for component backgrounds.
-/// * [shade6]-[shade8] for borders.
-/// * [shade9]-[shade10] for solid backgrounds.
-/// * [shade11]-[shade12] for text.
 enum Shade {
-  /// Use Case: App background.
+  /// Example use case: App background.
   shade1,
 
-  /// Use Case: Subtle background.
+  /// Example use case: Subtle background.
   shade2,
 
-  /// Use Case: Element background.
+  /// Example use case: Element background.
   shade3,
 
-  /// Use Case: Hovered element background.
+  /// Example use case: Hovered element background.
   shade4,
 
-  /// Use Case: Active/Selected element background.
+  /// Example use case: Active/Selected element background.
   shade5,
 
-  /// Use Case: Subtle borders and separators.
+  /// Example use case: Subtle borders and separators.
   shade6,
 
-  /// Use Case: element border and focus rings.
+  /// Example use case: Element border and focus rings.
   shade7,
 
-  /// Use Case: Hovered element border.
+  /// Example use case: Hovered element border.
   shade8,
 
-  /// Use Case: Solid backgrounds.
+  /// Example use case: Solid backgrounds.
   shade9,
 
-  /// Use Case: Hovered solid backgrounds.
+  /// Example use case: Hovered solid backgrounds.
   shade10,
 
-  /// Use Case: Low-contrast text.
+  /// Example use case: Low-contrast text.
   shade11,
 
-  /// Use Case: High-contrast text.
+  /// Example use case: High-contrast text.
   shade12,
 }
 

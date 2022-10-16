@@ -7,6 +7,9 @@ import 'package:bds_colors/theme/color_theme.dart';
 import 'package:bds_colors/theme/theme_scope.dart';
 import 'package:bds_colors/smart_color.dart';
 
+/// Provides colors data to its descendants widgets.
+///
+/// Should be used as a top-level widget.
 class ColorsData extends StatelessWidget {
   const ColorsData({
     Key? key,

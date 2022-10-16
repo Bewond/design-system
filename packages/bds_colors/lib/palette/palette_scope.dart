@@ -3,6 +3,7 @@ import 'package:state_provider/state_provider.dart';
 
 import 'package:bds_colors/smart_color.dart';
 
+/// A [ChangeNotifier] that holds the current [ColorMode].
 class PaletteState extends ChangeNotifier {
   PaletteState({ColorMode colorMode = ColorMode.auto}) : _colorMode = colorMode;
 
@@ -18,6 +19,9 @@ class PaletteState extends ChangeNotifier {
   }
 }
 
+/// Provides a [PaletteState] to its descendants widgets.
+///
+/// Use [context.watch<PaletteState>().theme] to access the current [ColorMode].
 class PaletteScope extends StatelessWidget {
   const PaletteScope({
     Key? key,
