@@ -2,7 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 import 'package:state_provider/state_provider.dart';
 
-import 'package:bds_colors/widgets/palette_provider.dart';
+import 'package:bds_colors/widgets/palette_scope.dart';
 import 'package:bds_colors/color_palette.dart';
 import 'package:bds_colors/smart_color.dart';
 
