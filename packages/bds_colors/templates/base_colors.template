@@ -1,0 +1,34 @@
+import 'package:flutter/painting.dart';
+
+/// Collection of base colors.
+class BaseColors {
+{{- range $i, $palette := .global -}}
+
+{{- if ne $i "Overlays" -}}
+
+{{ range $j, $color := .Light }}
+  /// {{ $i }} Light {{ $j }} (#{{ .description }})
+  static const Color {{ lower $i }}Light{{ $j }} = Color(0xFF{{ upper (trimprefix .value "#") }});
+{{ end -}}
+
+{{ range $j, $color := .Dark }}
+  /// {{ $i }} Dark {{ $j }} (#{{ .description }})
+  static const Color {{ lower $i }}Dark{{ $j }} = Color(0xFF{{ upper (trimprefix .value "#") }});
+{{ end -}}
+
+{{- else -}}
+
+{{ range $j, $color := .Light }}{{ $code := upper (substr .value 1 7) }}{{ $opacity := upper (substr .value 7 9) }}
+  /// {{ $i }} Light {{ $j }} (#{{ .description }})
+  static const Color {{ lower $i }}Light{{ $j }} = Color(0x{{ $opacity }}{{ $code }});
+{{ end -}}
+
+{{ range $j, $color := .Dark }}{{ $code := upper (substr .value 1 7) }}{{ $opacity := upper (substr .value 7 9) }}
+  /// {{ $i }} Dark {{ $j }} (#{{ .description }})
+  static const Color {{ lower $i }}Dark{{ $j }} = Color(0x{{ $opacity }}{{ $code }});
+{{ end -}}
+
+{{- end -}}
+
+{{- end -}}
+}

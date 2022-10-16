@@ -1,0 +1,25 @@
+import 'package:bds_colors/data/base_colors.g.dart';
+
+import 'package:bds_colors/palette/color_palette.dart';
+import 'package:bds_colors/palette/shade.dart';
+import 'package:bds_colors/smart_color.dart';
+
+/// Collection of color palettes.
+class Palettes {
+
+{{- range $i, $palette := .global }}
+  /// {{ $i }} color palette.
+  static const {{ lower $i }} = ColorPalette(
+    name: '{{ lower $i }}',
+    data: {
+    {{- range $j, $color := .Light }}
+      Shade.shade{{ $j }}: SmartColor(
+        BaseColors.{{ lower $i }}Light{{ $j }},
+        BaseColors.{{ lower $i }}Dark{{ $j }},
+      ),
+    {{- end }}
+    },
+  );
+{{ end -}}
+
+}

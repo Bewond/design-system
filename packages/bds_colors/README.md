@@ -10,7 +10,9 @@
 Color tokens and themes.
 
 ```sh
-cd packages/bds_colors/tokens
+cd packages/bds_colors/templates
 
-hof gen tokens.json -T palettes.template=palettes.g.dart -O ../lib/generated/
+hof gen tokens.json -T base_colors.template=base_colors.g.dart -O ../lib/data/
+
+hof gen tokens.json -T palettes.template=palettes.g.dart -O ../lib/data/
 ```

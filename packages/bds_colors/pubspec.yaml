@@ -3,6 +3,7 @@ description: A new Flutter package project.
 version: 0.0.1
 homepage: https://github.com/bewond/design-system
 repository: https://github.com/Bewond/design-system
+publish_to: none
 
 environment:
   sdk: ">=2.18.0 <3.0.0"
@@ -10,6 +11,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  #
+  state_provider:
+    git:
+      url: https://github.com/Riki1312/state-provider.git
 
 dev_dependencies:
   flutter_test:
