@@ -124,9 +124,11 @@ packages:
   state_provider:
     dependency: "direct main"
     description:
-      path: "../../../state-provider"
-      relative: true
-    source: path
+      path: "."
+      ref: HEAD
+      resolved-ref: "8ef0a09ec0504c833195a924a5783f0056945927"
+      url: "https://github.com/Riki1312/state-provider.git"
+    source: git
     version: "0.0.1"
   stream_channel:
     dependency: transitive

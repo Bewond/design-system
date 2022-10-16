@@ -14,8 +14,7 @@ dependencies:
   #
   state_provider:
     git:
-      url: git://github.com/Riki1312/state_provider.git
-      ref: main
+      url: https://github.com/Riki1312/state-provider.git
 
 dev_dependencies:
   flutter_test:
