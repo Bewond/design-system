@@ -4,12 +4,12 @@ import 'package:bds_colors/bds_colors.dart';
 
 void main() {
   group('ShadeUtils', () {
-    test('next get the next shade according to the sort order', () {
+    test('get the next shade according to the sort order', () {
       const shade1 = Shade.shade1;
       expect(shade1.next, Shade.shade2);
     });
 
-    test('previous get the previous shade according to the sort order', () {
+    test('get the previous shade according to the sort order', () {
       const shade2 = Shade.shade2;
       expect(shade2.previous, Shade.shade1);
     });
@@ -39,7 +39,7 @@ void main() {
       expect(shade4.add(100), Shade.shade12);
     });
 
-    test('add negative past the firs shade returns the firs shade', () {
+    test('add negative over the firs shade returns the firs shade', () {
       const shade4 = Shade.shade4;
       expect(shade4.add(-100), Shade.shade1);
     });

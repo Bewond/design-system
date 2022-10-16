@@ -5,83 +5,56 @@ import 'package:bds_colors/bds_colors.dart';
 
 void main() {
   group('ColorTheme', () {
-    test('get colors according to shade (light color mode)', () {
-      const palette = ColorPalette(
+    test('get colors according to token', () {
+      const theme = ColorTheme(
         name: 'test',
         data: {
-          Shade.shade1: SmartColor(Color(0xFFFFFFFF), Color(0xFF000000)),
-          Shade.shade2: SmartColor(Color(0xFFDDDDDD), Color(0xFF222222)),
+          Token.background: SmartColor.constant(Color(0xFF000000)),
+          Token.textPrimary: SmartColor.constant(Color(0xFFFFFFFF)),
         },
       );
-      resolveAuto(Color light, Color dark) => light;
 
-      expect(palette.get(Shade.shade1).resolve(ColorMode.light, resolveAuto),
-          const Color(0xFFFFFFFF));
-      expect(palette.get(Shade.shade2).resolve(ColorMode.light, resolveAuto),
-          const Color(0xFFDDDDDD));
-    });
-
-    test('get colors according to shade (dark color mode)', () {
-      const palette = ColorPalette(
-        name: 'test',
-        data: {
-          Shade.shade1: SmartColor(Color(0xFFFFFFFF), Color(0xFF000000)),
-          Shade.shade2: SmartColor(Color(0xFFDDDDDD), Color(0xFF222222)),
-        },
+      expect(
+        theme.get(Token.background),
+        const SmartColor.constant(Color(0xFF000000)),
       );
-      resolveAuto(Color light, Color dark) => dark;
-
-      expect(palette.get(Shade.shade1).resolve(ColorMode.dark, resolveAuto),
-          const Color(0xFF000000));
-      expect(palette.get(Shade.shade2).resolve(ColorMode.dark, resolveAuto),
-          const Color(0xFF222222));
-    });
-
-    test('get colors according to shade (auto color mode)', () {
-      const palette = ColorPalette(
-        name: 'test',
-        data: {
-          Shade.shade1: SmartColor(Color(0xFFFFFFFF), Color(0xFF000000)),
-          Shade.shade2: SmartColor(Color(0xFFDDDDDD), Color(0xFF222222)),
-        },
+      expect(
+        theme.get(Token.textPrimary),
+        const SmartColor.constant(Color(0xFFFFFFFF)),
       );
-      resolveAuto(Color light, Color dark) => light;
-
-      expect(palette.get(Shade.shade1).resolve(ColorMode.auto, resolveAuto),
-          const Color(0xFFFFFFFF));
-      expect(palette.get(Shade.shade2).resolve(ColorMode.auto, resolveAuto),
-          const Color(0xFFDDDDDD));
     });
 
-    test('throws assertion error if the shade is not defined', () {
-      const palette = ColorPalette(
+    test('throws assertion error if the token is not defined', () {
+      const theme = ColorTheme(
         name: 'test',
         data: {},
       );
 
-      expect(() => palette.get(Shade.shade1), throwsAssertionError);
+      expect(() => theme.get(Token.background), throwsAssertionError);
     });
 
     test('create a copy with some values overwritten', () {
-      const palette = ColorPalette(
+      const theme = ColorTheme(
         name: 'test',
         data: {
-          Shade.shade1: SmartColor(Color(0xFFFFFFFF), Color(0xFF000000)),
-          Shade.shade2: SmartColor(Color(0xFFDDDDDD), Color(0xFF222222)),
+          Token.background: SmartColor.constant(Color(0xFF000000)),
+          Token.textPrimary: SmartColor.constant(Color(0xFFFFFFFF)),
         },
       );
-      var copy = palette.copyWith(
-        name: 'test2',
+      final copy = theme.copyWith(
         data: {
-          Shade.shade1: const SmartColor(Color(0xFF000000), Color(0xFFFFFFFF)),
+          Token.background: const SmartColor.constant(Color(0xFF161616)),
         },
       );
-      resolveAuto(Color light, Color dark) => light;
 
-      expect(copy.get(Shade.shade1).resolve(ColorMode.auto, resolveAuto),
-          const Color(0xFF000000));
-      expect(copy.get(Shade.shade2).resolve(ColorMode.auto, resolveAuto),
-          const Color(0xFFDDDDDD));
+      expect(
+        copy.get(Token.background),
+        const SmartColor.constant(Color(0xFF161616)),
+      );
+      expect(
+        copy.get(Token.textPrimary),
+        const SmartColor.constant(Color(0xFFFFFFFF)),
+      );
     });
   });
 }
