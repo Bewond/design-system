@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-
 import 'package:bds_colors/bds_colors.dart';
+
+import 'package:bds_colors_example/colors_list.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,18 +12,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print("Build MyApp");
-
     return ColorsData(
       colorMode: ColorMode.light,
-      colorTheme: Themes.main.copyWith(data: {
-        Token.background: Palettes.blue.get(Shade.shade5),
+      child: Builder(builder: (context) {
+        return const MaterialApp(
+          title: 'BDS Example',
+          home: MyHomePage(),
+        );
       }),
-      child: MaterialApp(
-        title: 'BDS Example',
-        theme: ThemeData(primarySwatch: Colors.blue),
-        home: const MyHomePage(),
-      ),
     );
   }
 }
@@ -32,14 +29,13 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print("Build MyHomePage");
-
     return Scaffold(
       appBar: AppBar(title: const Text('BDS Colors Example')),
       body: ListView(
         children: const [
           MyHomeText(),
           MyHomeButton(),
+          ColorsList(),
         ],
       ),
     );
@@ -51,12 +47,11 @@ class MyHomeText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print("Build MyHomeText");
-
-    return Column(
-      children: [
-        Text('Color mode: ${context.watchColorMode}'),
-      ],
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 20),
+      child: Center(
+        child: Text('Color mode: ${context.watchColorMode}'),
+      ),
     );
   }
 }
@@ -66,29 +61,28 @@ class MyHomeButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print("Build MyHomeButton");
-
     final buttonStyle = ElevatedButton.styleFrom(
-      backgroundColor: context.themeColor(Token.background),
+      backgroundColor: context.themeColor(Token.backgroundActive),
     );
     final textStyle = TextStyle(
-      color: context.paletteColor(Palettes.gray, Shade.shade12),
+      color: context.themeColor(Token.textPrimary),
     );
 
     return Center(
-      child: Column(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          ElevatedButton(
+          FilledButton(
             onPressed: () => context.colorMode = ColorMode.light,
             style: buttonStyle,
             child: Text('Light Mode', style: textStyle),
           ),
-          ElevatedButton(
+          FilledButton(
             onPressed: () => context.colorMode = ColorMode.dark,
             style: buttonStyle,
             child: Text('Dark Mode', style: textStyle),
           ),
-          ElevatedButton(
+          FilledButton(
             onPressed: () => context.colorMode = ColorMode.auto,
             style: buttonStyle,
             child: Text('Auto Mode', style: textStyle),
