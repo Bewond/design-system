@@ -2,7 +2,7 @@ name: bds_colors
 description: A new Flutter package project.
 version: 0.0.1
 homepage: https://github.com/bewond/design-system
-repository: https://github.com/Bewond/design-system
+repository: https://github.com/bewond/design-system
 publish_to: none
 
 environment:
@@ -14,7 +14,7 @@ dependencies:
   #
   state_provider:
     git:
-      url: https://github.com/Riki1312/state-provider.git
+      url: https://github.com/riki1312/state-provider.git
 
 dev_dependencies:
   flutter_test:

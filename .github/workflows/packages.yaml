@@ -1,9 +1,5 @@
 name: packages
 
-concurrency:
-  group: $-$
-  cancel-in-progress: true
-
 on:
   pull_request:
     branches:
