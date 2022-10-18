@@ -1,23 +1,15 @@
 import 'package:flutter/widgets.dart';
 import 'package:state_provider/state_provider.dart';
 
-import 'package:bds_colors/data/themes.dart';
 import 'package:bds_colors/theme/color_theme.dart';
 
-/// A [ChangeNotifier] that holds the current [ColorTheme].
-class ThemeState extends ChangeNotifier {
-  ThemeState({required ColorTheme theme}) : _theme = theme;
+/// A [StateValue] that holds the current [ColorTheme].
+class ThemeState extends StateValue<ColorTheme> {
+  ThemeState({required ColorTheme colorTheme}) : super(colorTheme);
 
-  ColorTheme _theme = Themes.main;
-
-  ColorTheme get theme => _theme;
-
-  set theme(ColorTheme value) {
-    if (_theme != value) {
-      _theme = value;
-      notifyListeners();
-    }
-  }
+  /// The current [ColorTheme].
+  ColorTheme get colorTheme => value;
+  set colorTheme(ColorTheme value) => this.value = value;
 }
 
 /// Provides a [ThemeState] to its descendants widgets.
@@ -37,7 +29,7 @@ class ThemeScope extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return StateProvider(
-      data: ThemeState(theme: theme),
+      state: ThemeState(colorTheme: theme),
       child: child,
     );
   }

@@ -24,11 +24,11 @@ extension ColorContext on BuildContext {
   /// Watch the current [ColorTheme].
   ///
   /// This will rebuild the widget when the [ColorTheme] changes.
-  ColorTheme get watchColorTheme => watch<ThemeState>().theme;
+  ColorTheme get watchColorTheme => watch<ThemeState>().colorTheme;
 
   /// The current [ColorTheme].
-  ColorTheme get colorTheme => read<ThemeState>().theme;
-  set colorTheme(ColorTheme value) => read<ThemeState>().theme = value;
+  ColorTheme get colorTheme => read<ThemeState>().colorTheme;
+  set colorTheme(ColorTheme value) => read<ThemeState>().colorTheme = value;
 
   /// Get a color value from a specified [ColorPalette].
   ///
