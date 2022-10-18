@@ -133,7 +133,7 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: "8ef0a09ec0504c833195a924a5783f0056945927"
+      resolved-ref: d9709088e57c90cf0ea61af5a1967d0ec36790ac
       url: "https://github.com/Riki1312/state-provider.git"
     source: git
     version: "0.0.1"

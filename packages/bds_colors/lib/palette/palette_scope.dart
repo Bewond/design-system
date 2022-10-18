@@ -3,25 +3,18 @@ import 'package:state_provider/state_provider.dart';
 
 import 'package:bds_colors/smart_color.dart';
 
-/// A [ChangeNotifier] that holds the current [ColorMode].
-class PaletteState extends ChangeNotifier {
-  PaletteState({ColorMode colorMode = ColorMode.auto}) : _colorMode = colorMode;
+/// A [StateValue] that holds the current [ColorMode].
+class PaletteState extends StateValue<ColorMode> {
+  PaletteState({required ColorMode colorMode}) : super(colorMode);
 
-  ColorMode _colorMode = ColorMode.auto;
-
-  ColorMode get colorMode => _colorMode;
-
-  set colorMode(ColorMode value) {
-    if (_colorMode != value) {
-      _colorMode = value;
-      notifyListeners();
-    }
-  }
+  /// The current [ColorMode].
+  ColorMode get colorMode => value;
+  set colorMode(ColorMode value) => this.value = value;
 }
 
 /// Provides a [PaletteState] to its descendants widgets.
 ///
-/// Use [context.watch<PaletteState>().theme] to access the current [ColorMode].
+/// Use [context.watch<PaletteState>().colorMode] to access the current [ColorMode].
 class PaletteScope extends StatelessWidget {
   const PaletteScope({
     Key? key,
@@ -36,7 +29,7 @@ class PaletteScope extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return StateProvider(
-      data: PaletteState(colorMode: colorMode),
+      state: PaletteState(colorMode: colorMode),
       child: child,
     );
   }
