@@ -2,7 +2,7 @@ name: bds_type
 description: A new Flutter package project.
 version: 0.0.1
 homepage: https://github.com/bewond/design-system
-repository: https://github.com/Bewond/design-system
+repository: https://github.com/bewond/design-system
 
 environment:
   sdk: ">=2.18.0 <3.0.0"

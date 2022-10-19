@@ -134,7 +134,7 @@ packages:
       path: "."
       ref: HEAD
       resolved-ref: d9709088e57c90cf0ea61af5a1967d0ec36790ac
-      url: "https://github.com/Riki1312/state-provider.git"
+      url: "https://github.com/riki1312/state-provider.git"
     source: git
     version: "0.0.1"
   stream_channel:
