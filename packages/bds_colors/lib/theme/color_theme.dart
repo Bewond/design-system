@@ -24,7 +24,7 @@ class ColorTheme {
   final ColorThemeData data;
 
   /// Returns the [SmartColor] based on the given [token].
-  SmartColor get(Token token) {
+  SmartColor operator [](Token token) {
     // Assert that the token exists in the theme.
     assert(data.containsKey(token));
     return data[token] ?? const SmartColor.constant(Color(0xFF000000));

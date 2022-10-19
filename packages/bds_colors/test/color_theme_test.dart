@@ -15,11 +15,11 @@ void main() {
       );
 
       expect(
-        theme.get(Token.background),
+        theme[Token.background],
         const SmartColor.constant(Color(0xFF000000)),
       );
       expect(
-        theme.get(Token.textPrimary),
+        theme[Token.textPrimary],
         const SmartColor.constant(Color(0xFFFFFFFF)),
       );
     });
@@ -30,7 +30,7 @@ void main() {
         data: {},
       );
 
-      expect(() => theme.get(Token.background), throwsAssertionError);
+      expect(() => theme[Token.background], throwsAssertionError);
     });
 
     test('create a copy with some values overwritten', () {
@@ -48,11 +48,11 @@ void main() {
       );
 
       expect(
-        copy.get(Token.background),
+        copy[Token.background],
         const SmartColor.constant(Color(0xFF161616)),
       );
       expect(
-        copy.get(Token.textPrimary),
+        copy[Token.textPrimary],
         const SmartColor.constant(Color(0xFFFFFFFF)),
       );
     });

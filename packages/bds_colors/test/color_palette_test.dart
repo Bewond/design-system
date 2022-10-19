@@ -15,11 +15,11 @@ void main() {
       );
 
       expect(
-        palette.get(Shade.shade1),
+        palette[Shade.shade1],
         const SmartColor.constant(Color(0xFF000000)),
       );
       expect(
-        palette.get(Shade.shade2),
+        palette[Shade.shade2],
         const SmartColor.constant(Color(0xFFFFFFFF)),
       );
     });
@@ -30,7 +30,7 @@ void main() {
         data: {},
       );
 
-      expect(() => palette.get(Shade.shade1), throwsAssertionError);
+      expect(() => palette[Shade.shade1], throwsAssertionError);
     });
 
     test('create a copy with some values overwritten', () {
@@ -47,14 +47,8 @@ void main() {
         },
       );
 
-      expect(
-        copy.get(Shade.shade1),
-        const SmartColor.constant(Color(0xFF161616)),
-      );
-      expect(
-        copy.get(Shade.shade2),
-        const SmartColor.constant(Color(0xFFFFFFFF)),
-      );
+      expect(copy[Shade.shade1], const SmartColor.constant(Color(0xFF161616)));
+      expect(copy[Shade.shade2], const SmartColor.constant(Color(0xFFFFFFFF)));
     });
   });
 }

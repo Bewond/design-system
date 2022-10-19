@@ -24,7 +24,7 @@ class ColorPalette {
   final ColorPaletteData data;
 
   /// Returns the [SmartColor] based on the given [shade].
-  SmartColor get(Shade shade) {
+  SmartColor operator [](Shade shade) {
     // Assert that the shade exists in the palette.
     assert(data.containsKey(shade));
     return data[shade] ?? const SmartColor.constant(Color(0xFF000000));

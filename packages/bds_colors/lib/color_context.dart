@@ -34,7 +34,7 @@ extension ColorContext on BuildContext {
   ///
   /// This will rebuild the widget when the [ColorMode] changes.
   Color paletteColor(ColorPalette palette, Shade shade) {
-    return _resolveSmartColor(palette.get(shade));
+    return _resolveSmartColor(palette[shade]);
   }
 
   /// Get a color value from the current [ColorTheme].
@@ -42,7 +42,7 @@ extension ColorContext on BuildContext {
   /// This will rebuild the widget when the [ColorMode]
   /// or the current [ColorTheme] changes.
   Color themeColor(Token token) {
-    return _resolveSmartColor(watchColorTheme.get(token));
+    return _resolveSmartColor(watchColorTheme[token]);
   }
 
   Color _resolveSmartColor(SmartColor smartColor) {
