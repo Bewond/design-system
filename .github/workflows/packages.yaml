@@ -4,9 +4,13 @@ on:
   pull_request:
     branches:
       - main
+    paths:
+      - "**.dart"
   push:
     branches:
       - main
+    paths:
+      - "**.dart"
 
 jobs:
   # BDS Colors package workflow.
